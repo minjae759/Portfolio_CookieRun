@@ -16,7 +16,6 @@ public class BigBearJelly : MonoBehaviour
         isCrashed = false;
         dis = 2.5f;
     }
-
     private void Update()
     {
         if (InGameManager.instance.ismagatic && !isCrashed)

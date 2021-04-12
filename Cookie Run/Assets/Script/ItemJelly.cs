@@ -9,7 +9,6 @@ public class ItemJelly : MonoBehaviour
     Vector3 target;
     Animator animator;
 
-    // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -22,7 +21,7 @@ public class ItemJelly : MonoBehaviour
         if (InGameManager.instance.ismagatic && !isCrashed)
         {
             target = PetScript.instance.transform.position;
-            if (Vector3.Distance(target, transform.position) < dis) 
+            if (Vector3.Distance(target, transform.position) < dis)
                 transform.position = Vector3.MoveTowards(transform.position, target, 0.35f);
         }
     }
