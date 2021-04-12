@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UIAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 12
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: b9c511ee425a37a4bb67b4019dc00b37, type: 3}
+    - {fileID: 2800000, guid: 5ae88b6f3fa899343a6199dde90550aa, type: 3}
+    - {fileID: 2800000, guid: 8d950c0c5efb04c44b78fb9ecb4808af, type: 3}
+    - {fileID: 2800000, guid: 612ac65c1d5bd804294f3c7fbcdb6e84, type: 3}
+    - {fileID: 2800000, guid: 1e19bc1f0a4f7c046bdaca28b3bc33b2, type: 3}
+    - {fileID: 2800000, guid: b669c07fdd9eaea47bf076fc919708cf, type: 3}
+    - {fileID: 2800000, guid: 9b354d3798a86774487077e7eadcbc69, type: 3}
+    - {fileID: 2800000, guid: 21282b468972e854e987f202b8c6e5d7, type: 3}
+    - {fileID: 2800000, guid: 205855ec14d176145bfd93354fde89b2, type: 3}
+    - {fileID: 2800000, guid: fec88cbcd2043f44f8a3dce7633cf2a0, type: 3}
+    - {fileID: 2800000, guid: d66ae18f627bfe14e80b8dfc90bf2017, type: 3}
+    - {fileID: 2800000, guid: 59dbfc1deb8389649a9c59a2847ad4fd, type: 3}
+    - {fileID: 2800000, guid: 5cba8168de1160b4387d29d91333f929, type: 3}
+    - {fileID: 2800000, guid: fa5876f698a927348ae100502ae7b1dd, type: 3}
+    - {fileID: 2800000, guid: 1bd4509376dcbab4dbdbca7430079436, type: 3}
+    - {fileID: 2800000, guid: 1606ead4757e84740b27890042c9defd, type: 3}
+    - {fileID: 2800000, guid: dcd0b847d58a4334e9bfeb0471b9f05b, type: 3}
+    - {fileID: 2800000, guid: 71717dc258bd7d84f92dbe98f3c6a37b, type: 3}
+    - {fileID: 2800000, guid: a163924bf83588449855c27a31631a24, type: 3}
+    - {fileID: 2800000, guid: 7b7236de08c432742a9bd4c73a894db2, type: 3}
+    - {fileID: 2800000, guid: ef8a63304b2ba4a40924fb9de7337144, type: 3}
+    - {fileID: 2800000, guid: 1713a47204fa14444a4ba8a349b3f616, type: 3}
+    - {fileID: 2800000, guid: 3cece89186ba51446ae249fbdd255fa1, type: 3}
+    - {fileID: 2800000, guid: 529e759437e2ec44ca71a82186381388, type: 3}
+    - {fileID: 2800000, guid: 73cddd2489758914985a19b7dc60b391, type: 3}
+    - {fileID: 2800000, guid: c7a1c87c202dec648b1719033793c8b2, type: 3}
+    - {fileID: 2800000, guid: 563b8e88a9d07b049b8a78c9781da8e3, type: 3}
+    - {fileID: 102900000, guid: f4e675e67f70aa642a5bf9c061f7dca5, type: 3}
+    - {fileID: 2800000, guid: f8ecddccb1a75af4dbe2e2c3b0cb2028, type: 3}
+    - {fileID: 2800000, guid: ad28fc01253c3a343816cc331f57c8bc, type: 3}
+    - {fileID: 2800000, guid: ac47a1079e3c5b8478964f1e27be29b3, type: 3}
+    - {fileID: 2800000, guid: 7ca85ec52c5590545891e6344738127d, type: 3}
+    - {fileID: 2800000, guid: 0627b9a2f48a26c4d94d909081d21086, type: 3}
+    - {fileID: 2800000, guid: 193b89be35b534841a12460741b8bf1a, type: 3}
+    - {fileID: 2800000, guid: ce393cca846d4b64ea852d07724ebb8c, type: 3}
+    - {fileID: 2800000, guid: b6914ab181a1c374ca997aec354832a8, type: 3}
+    - {fileID: 2800000, guid: e892704c563a358459d92644d317f18d, type: 3}
+    - {fileID: 2800000, guid: 35bdccc380242464ba69efb35b016491, type: 3}
+    - {fileID: 2800000, guid: 035d9da6ae6107947ace5a791edf7bb5, type: 3}
+    - {fileID: 2800000, guid: 3e0f74b852378e54c8e0bef692793867, type: 3}
+    totalSpriteSurfaceArea: 4566095
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ef8a63304b2ba4a40924fb9de7337144, type: 3}
+  - {fileID: 21300000, guid: ad28fc01253c3a343816cc331f57c8bc, type: 3}
+  - {fileID: 21300000, guid: 3cece89186ba51446ae249fbdd255fa1, type: 3}
+  - {fileID: 21300000, guid: b6914ab181a1c374ca997aec354832a8, type: 3}
+  - {fileID: 21300000, guid: 1713a47204fa14444a4ba8a349b3f616, type: 3}
+  - {fileID: 21300000, guid: 0627b9a2f48a26c4d94d909081d21086, type: 3}
+  - {fileID: 21300000, guid: 71717dc258bd7d84f92dbe98f3c6a37b, type: 3}
+  - {fileID: 21300000, guid: 1bd4509376dcbab4dbdbca7430079436, type: 3}
+  - {fileID: 21300000, guid: 35bdccc380242464ba69efb35b016491, type: 3}
+  - {fileID: 21300000, guid: 73cddd2489758914985a19b7dc60b391, type: 3}
+  - {fileID: 21300000, guid: 529e759437e2ec44ca71a82186381388, type: 3}
+  - {fileID: 21300000, guid: 1606ead4757e84740b27890042c9defd, type: 3}
+  - {fileID: 21300000, guid: 7ca85ec52c5590545891e6344738127d, type: 3}
+  - {fileID: 21300000, guid: 21282b468972e854e987f202b8c6e5d7, type: 3}
+  - {fileID: 21300000, guid: 035d9da6ae6107947ace5a791edf7bb5, type: 3}
+  - {fileID: 21300000, guid: fa5876f698a927348ae100502ae7b1dd, type: 3}
+  - {fileID: 21300000, guid: ac47a1079e3c5b8478964f1e27be29b3, type: 3}
+  - {fileID: 21300000, guid: 9b354d3798a86774487077e7eadcbc69, type: 3}
+  - {fileID: 21300000, guid: dcd0b847d58a4334e9bfeb0471b9f05b, type: 3}
+  - {fileID: 21300000, guid: 5cba8168de1160b4387d29d91333f929, type: 3}
+  - {fileID: 21300000, guid: 563b8e88a9d07b049b8a78c9781da8e3, type: 3}
+  - {fileID: 21300000, guid: 3e0f74b852378e54c8e0bef692793867, type: 3}
+  - {fileID: 21300000, guid: ce393cca846d4b64ea852d07724ebb8c, type: 3}
+  - {fileID: 21300000, guid: a163924bf83588449855c27a31631a24, type: 3}
+  - {fileID: 21300000, guid: 8d950c0c5efb04c44b78fb9ecb4808af, type: 3}
+  - {fileID: 21300000, guid: e892704c563a358459d92644d317f18d, type: 3}
+  - {fileID: 21300000, guid: 612ac65c1d5bd804294f3c7fbcdb6e84, type: 3}
+  - {fileID: 21300000, guid: c7a1c87c202dec648b1719033793c8b2, type: 3}
+  - {fileID: 21300000, guid: fec88cbcd2043f44f8a3dce7633cf2a0, type: 3}
+  - {fileID: 21300000, guid: f8ecddccb1a75af4dbe2e2c3b0cb2028, type: 3}
+  - {fileID: 21300000, guid: 205855ec14d176145bfd93354fde89b2, type: 3}
+  - {fileID: 21300000, guid: 59dbfc1deb8389649a9c59a2847ad4fd, type: 3}
+  - {fileID: 21300000, guid: 193b89be35b534841a12460741b8bf1a, type: 3}
+  - {fileID: 21300000, guid: 7b7236de08c432742a9bd4c73a894db2, type: 3}
+  - {fileID: 21300000, guid: b9c511ee425a37a4bb67b4019dc00b37, type: 3}
+  - {fileID: 21300000, guid: 1e19bc1f0a4f7c046bdaca28b3bc33b2, type: 3}
+  - {fileID: 21300000, guid: 5ae88b6f3fa899343a6199dde90550aa, type: 3}
+  - {fileID: 21300000, guid: b669c07fdd9eaea47bf076fc919708cf, type: 3}
+  - {fileID: 21300000, guid: d66ae18f627bfe14e80b8dfc90bf2017, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - ingame_painUI
+  - ovenbreak0001_bg1
+  - ingame_scoreicon
+  - PopNewSetting_windowBG
+  - ingame_pause
+  - PopNewSetting_slidebar
+  - ingame_hpicon_bg
+  - ingame_hpbar
+  - PopNewSetting_togglebutton
+  - ingame_slidebutton1
+  - ingame_slidebutton
+  - ingame_hpbar1
+  - PopNewSetting_slidebutton
+  - breakoutList_league
+  - PopNewSetting_togglebutton1
+  - Cookie Run OvenBreak Logo KR (1)
+  - Sprite-0004
+  - breakoutList_guild1
+  - ingame_hpicon
+  - breakoutList_ovenbreak1
+  - result_BG
+  - TrainingCenterCommon_X
+  - PopNewSetting_soundicon
+  - ingame_jumpbutton
+  - breakoutList_champions
+  - PopNewSetting_windowBG1
+  - breakoutList_champions1
+  - mainPlay_meunbar
+  - breakoutList_memory
+  - ovenbreak0001_bg
+  - breakoutList_league1
+  - breakoutList_ovenbreak
+  - PopNewSetting_check
+  - ingame_jumpbutton1
+  - _Original
+  - breakoutList_friendship
+  - bg_pop_lobby_affection_lobbyskin_list
+  - breakoutList_guild
+  - breakoutList_memory1
+  m_Tag: UIAtlas
+  m_IsVariant: 0
