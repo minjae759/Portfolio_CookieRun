@@ -67,4 +67,37 @@ public class PetScript : MonoBehaviour
         
         yield break;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!InGameManager.instance.isGameover)
+        {
+            if (collision.gameObject.tag == "Boost")
+            {
+                CooKie.instance.isreinforce = true;
+                animator.SetBool("Boost", true);
+                CooKie.instance.isboost = true;
+                InGameManager.instance.Onboosteffect();
+                SoundManager.instance.PlayOnGetItemJelly();
+            }
+            if (collision.gameObject.tag == "Bigger")
+            {
+                CooKie.instance.isreinforce = true;
+                CooKie.instance.OnBigger();
+                CooKie.instance.isbig = true;
+                Invoke("Offbigger", 3f);
+            }
+            if (collision.gameObject.tag == "Magnetic")
+            {
+                InGameManager.instance.ismagatic = true;
+                OnMagneticeffect();
+            }
+            if (collision.gameObject.tag == "Potion")
+            {
+                InGameManager.instance.healhp(0.1f);
+                SoundManager.instance.PlayOnGetItemJelly();
+            }
+        }
+    }
+
 }

@@ -7,7 +7,7 @@ public class CooKie : MonoBehaviour
     public static CooKie instance;
 
     bool isGround = true;
-    bool isboost;
+    public bool isboost;
     public bool isbig;
     public bool isreinforce = false;
 
@@ -101,8 +101,7 @@ public class CooKie : MonoBehaviour
             if (collision.gameObject.tag == "Bigger")
             {
                 isreinforce = true;
-                StopCoroutine(biggerscale());
-                StartCoroutine(biggerscale());
+                OnBigger();
                 isbig = true;
                 Invoke("Offbigger", 3f);
             }
@@ -128,13 +127,10 @@ public class CooKie : MonoBehaviour
         }
     }
 
-    public void Offboost()
+    public void OnBigger()
     {
-        isreinforce = false;
-        isboost = false;
-        animator.SetBool("Boost", false);
-        StopCoroutine(invincibilityeffect());
-        StartCoroutine(invincibilityeffect());
+        StopCoroutine(biggerscale());
+        StartCoroutine(biggerscale());
     }
 
     void Offbigger()
@@ -142,6 +138,15 @@ public class CooKie : MonoBehaviour
         isbig = false;
         StopCoroutine(smallerscale());
         StartCoroutine(smallerscale());
+        StopCoroutine(invincibilityeffect());
+        StartCoroutine(invincibilityeffect());
+    }
+
+    public void Offboost()
+    {
+        isreinforce = false;
+        isboost = false;
+        animator.SetBool("Boost", false);
         StopCoroutine(invincibilityeffect());
         StartCoroutine(invincibilityeffect());
     }
