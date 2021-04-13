@@ -31,7 +31,7 @@ public class obstacleeffect : MonoBehaviour
                 StartCoroutine(Onrotate());
                 rigid.constraints = RigidbodyConstraints2D.None;
                 rigid.AddForce(Vector2.right * force * Time.deltaTime);
-                SoundManager.instance.CrashWithObstacle();
+                SFXmanager.instance.CrashWithObstacle();
             }
         }     
     }

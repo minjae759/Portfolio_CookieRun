@@ -35,7 +35,7 @@ public class BigBearJelly : MonoBehaviour
             {
                 gameObject.layer = 13;
                 InGameManager.instance.updateScore(score);
-                SoundManager.instance.PlayOnGetBigBearJelly();
+                SFXmanager.instance.PlayOnGetBigBearJelly();
                 animator.SetTrigger("Die");
             }
         }

@@ -24,7 +24,7 @@ public class FlyingBearJelly : MonoBehaviour
             {
                 gameObject.layer = 13;
                 InGameManager.instance.updateScore(score);
-                SoundManager.instance.PlayOnGetFlyingBearJelly();
+                SFXmanager.instance.PlayOnGetFlyingBearJelly();
                 animator.SetTrigger("Die");
             }
         }

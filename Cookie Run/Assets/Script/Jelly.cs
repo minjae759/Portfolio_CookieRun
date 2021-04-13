@@ -35,7 +35,7 @@ public class Jelly : MonoBehaviour
             {
                 gameObject.layer = 13;
                 InGameManager.instance.updateScore(score);
-                SoundManager.instance.PlayOnGetJelly();
+                SFXmanager.instance.PlayOnGetJelly();
                 animator.SetTrigger("Die");
             }
         }

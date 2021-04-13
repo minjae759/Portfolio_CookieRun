@@ -78,7 +78,7 @@ public class PetScript : MonoBehaviour
                 animator.SetBool("Boost", true);
                 CooKie.instance.isboost = true;
                 InGameManager.instance.Onboosteffect();
-                SoundManager.instance.PlayOnGetItemJelly();
+                SFXmanager.instance.PlayOnGetItemJelly();
             }
             if (collision.gameObject.tag == "Bigger")
             {
@@ -95,7 +95,7 @@ public class PetScript : MonoBehaviour
             if (collision.gameObject.tag == "Potion")
             {
                 InGameManager.instance.healhp(0.1f);
-                SoundManager.instance.PlayOnGetItemJelly();
+                SFXmanager.instance.PlayOnGetItemJelly();
             }
         }
     }

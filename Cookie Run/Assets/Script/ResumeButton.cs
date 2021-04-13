@@ -9,7 +9,7 @@ public class ResumeButton : MonoBehaviour
     public void OnClick()
     {
         Time.timeScale = 1;
-        SoundManager.instance.PlayOnuibutton();
+        SFXmanager.instance.PlayOnuibutton();
         pauseMenu.SetActive(false);
     }
 }

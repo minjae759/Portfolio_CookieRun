@@ -7,7 +7,7 @@ public class RestartButton : MonoBehaviour
 {
     public void Onclick()
     {
-        SoundManager.instance.PlayOnuibutton();
+        SFXmanager.instance.PlayOnuibutton();
         SceneManager.LoadScene("OvenBreak");
     }
 }

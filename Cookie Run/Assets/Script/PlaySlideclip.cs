@@ -6,6 +6,6 @@ public class PlaySlideclip : StateMachineBehaviour
 {
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        SoundManager.instance.PlayOnSlideclip();
+        SFXmanager.instance.PlayOnSlideclip();
     }
 }

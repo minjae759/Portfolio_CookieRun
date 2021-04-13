@@ -34,7 +34,7 @@ public class ItemJelly : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 gameObject.layer = 13;
-                SoundManager.instance.PlayOnGetItemJelly();
+                SFXmanager.instance.PlayOnGetItemJelly();
                 animator.SetTrigger("Die");
             }
         }

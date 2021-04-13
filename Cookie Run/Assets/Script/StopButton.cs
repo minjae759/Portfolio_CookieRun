@@ -7,7 +7,7 @@ public class StopButton : MonoBehaviour
 {
     public void Onclick()
     {
-        SoundManager.instance.PlayOnuibutton();
+        SFXmanager.instance.PlayOnuibutton();
         InGameManager.instance.GameStop();
     }
 }

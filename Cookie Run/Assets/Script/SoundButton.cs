@@ -19,14 +19,14 @@ public class SoundButton : MonoBehaviour
             gameObject.GetComponentInChildren<Image>().sprite = onImage;
             gameObject.GetComponentInChildren<Text>().text = "켜짐";
             gameObject.GetComponentInChildren<Outline>().effectColor = oncolor;
-            SoundManager.instance.SoundOn(slider.value);
+            SFXmanager.instance.SoundOn(slider.value);
         }
         else
         {
             gameObject.GetComponentInChildren<Image>().sprite = offImage;
             gameObject.GetComponentInChildren<Text>().text = "꺼짐";
             gameObject.GetComponentInChildren<Outline>().effectColor = offcolor;
-            SoundManager.instance.SoundOff();
+            SFXmanager.instance.SoundOff();
         }
     }
 }

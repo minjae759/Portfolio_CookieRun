@@ -96,7 +96,7 @@ public class CooKie : MonoBehaviour
                 animator.SetBool("Boost", true);
                 isboost = true;
                 InGameManager.instance.Onboosteffect();
-                SoundManager.instance.PlayOnGetItemJelly();
+                SFXmanager.instance.PlayOnGetItemJelly();
             }
             if (collision.gameObject.tag == "Bigger")
             {
@@ -114,7 +114,7 @@ public class CooKie : MonoBehaviour
             {
                 animator.SetTrigger("Hurt");
                 InGameManager.instance.damagedhp(0.03f);
-                SoundManager.instance.PlayOnCrashWithBody();
+                SFXmanager.instance.PlayOnCrashWithBody();
                 StopCoroutine(invincibilityeffect());
                 StartCoroutine(invincibilityeffect());
                 DamagedUI.instance.Ondamaged();
@@ -122,7 +122,7 @@ public class CooKie : MonoBehaviour
             if (collision.gameObject.tag == "Potion")
             {
                 InGameManager.instance.healhp(0.1f);
-                SoundManager.instance.PlayOnGetItemJelly();
+                SFXmanager.instance.PlayOnGetItemJelly();
             }
         }
     }
@@ -154,7 +154,7 @@ public class CooKie : MonoBehaviour
     IEnumerator biggerscale()
     {
         float time = 0f;
-        SoundManager.instance.PlayOnGiganticStart();
+        SFXmanager.instance.PlayOnGiganticStart();
         while (time <= 1f)
         {
             yield return new WaitForSeconds(0.001f);
@@ -168,7 +168,7 @@ public class CooKie : MonoBehaviour
     IEnumerator smallerscale()
     {
         float time = 0f;
-        SoundManager.instance.PlayOnGiganticEnd();
+        SFXmanager.instance.PlayOnGiganticEnd();
         while (time <= 1f)
         {
             yield return new WaitForSeconds(0.001f);

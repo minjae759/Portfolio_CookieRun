@@ -60,7 +60,7 @@ public class InGameManager : MonoBehaviour
             isGameover = true;
             speed = 0f;
             CooKie.instance.Die();
-            SoundManager.instance.PlayOnGameEnd();
+            SFXmanager.instance.PlayOnGameEnd();
             Invoke("OnResult", 2f);
         }
     }
@@ -93,7 +93,6 @@ public class InGameManager : MonoBehaviour
     {
         speed = 12f;
         StopAllCoroutines();
-        //StopCoroutine(BoostTime());
         StartCoroutine(BoostTime());
     }
 
@@ -120,7 +119,6 @@ public class InGameManager : MonoBehaviour
     {
         result.SetActive(true);
     }
-
 
     public float getspeed()
     {

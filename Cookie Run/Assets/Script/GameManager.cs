@@ -21,17 +21,17 @@ public class GameManager : MonoBehaviour
         if (scene.name == "OvenBreak")
         {
             Time.timeScale = 1;
-            SoundManager.instance.PlayOnChanege();
+            BGMmanager.instance.PlayOnChanege();
         }
         if (scene.name == "login")
         {
             Time.timeScale = 1;
-            SoundManager.instance.PlayOnTitle();
+            BGMmanager.instance.PlayOnTitle();
         }
         if (scene.name == "mode_select")
         {
             Time.timeScale = 1;
-            SoundManager.instance.PlayOnMainlobby();
+            BGMmanager.instance.PlayOnMainlobby();
         }
 
     }

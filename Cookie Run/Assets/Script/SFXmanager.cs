@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SFXmanager : MonoBehaviour
 {
-    public static SoundManager instance;
+
+    public static SFXmanager instance;
 
     AudioSource audioSource;
-
-    public AudioClip bgm_Mainlobby;
-    public AudioClip bgm_The_Witchs_House;
-    public AudioClip bgm_Twisted_Maze_Grove;
 
     public AudioClip[] getFlyingBearJelly;
 
@@ -48,42 +45,7 @@ public class SoundManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 0.5f;
         isvolumeOn = true;
-    }
-
-    private void Start()
-    {
         flyingjellyidx = 0;
-    }
-
-    public void PlayOnMainlobby()
-    {
-        if(isvolumeOn)
-        {
-            audioSource.clip = bgm_Mainlobby;
-            audioSource.Stop();
-            audioSource.Play();
-        }
-    }
-    public void PlayOnChanege()
-    {
-        if (isvolumeOn)
-        {
-            audioSource.clip = bgm_Twisted_Maze_Grove;
-            audioSource.Stop();
-            audioSource.Play();
-        }
-            
-    }
-    
-    public void PlayOnTitle()
-    {
-        if (isvolumeOn)
-        {
-            audioSource.clip = bgm_The_Witchs_House;
-            audioSource.Stop();
-            audioSource.Play();
-        }
-            
     }
 
     public void PlayOnGameStart()
@@ -115,7 +77,7 @@ public class SoundManager : MonoBehaviour
         if (isvolumeOn)
             audioSource.PlayOneShot(getJelly);
     }
-    
+
 
     public void PlayOnGetFlyingBearJelly()
     {
@@ -124,7 +86,6 @@ public class SoundManager : MonoBehaviour
             if (flyingjellyidx >= 6) flyingjellyidx = 0;
             audioSource.PlayOneShot(getFlyingBearJelly[flyingjellyidx++]);
         }
-            
     }
 
     public void PlayOnGetBigBearJelly()
@@ -150,7 +111,7 @@ public class SoundManager : MonoBehaviour
         if (isvolumeOn)
             audioSource.PlayOneShot(crashWithBody);
     }
-    
+
     public void PlayOnGiganticStart()
     {
         if (isvolumeOn)
@@ -162,7 +123,7 @@ public class SoundManager : MonoBehaviour
         if (isvolumeOn)
             audioSource.PlayOneShot(giganticEnd);
     }
-    
+
     public void PlayOnGiganticLanding()
     {
         if (isvolumeOn)
@@ -190,7 +151,7 @@ public class SoundManager : MonoBehaviour
     public void SoundOn(float value)
     {
         isvolumeOn = true;
-        audioSource.volume = value * 0.5f;
+        audioSource.volume = value * 1.0f;
     }
 
     public void SoundOff()
@@ -202,6 +163,7 @@ public class SoundManager : MonoBehaviour
     public void ChangeVolume(float value)
     {
         if (isvolumeOn)
-            audioSource.volume = value * 0.5f;
+            audioSource.volume = value * 1.0f;
     }
+
 }

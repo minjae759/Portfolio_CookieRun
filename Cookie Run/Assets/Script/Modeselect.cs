@@ -29,7 +29,7 @@ public class Modeselect : MonoBehaviour
         transform.localScale = new Vector3(2f, 2f, 2f);
         if (sceneName != "null")
         {
-            SoundManager.instance.PlayOnGameStart();
+            SFXmanager.instance.PlayOnGameStart();
             SceneManager.LoadScene(sceneName);
         }
     }
