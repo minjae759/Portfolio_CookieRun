@@ -824,7 +824,7 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: 8849722a60a9cb0669e3cbcf23a44c44
+      Hash: 5df7d9ed977a48d4fc481681d141a215
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CooKie

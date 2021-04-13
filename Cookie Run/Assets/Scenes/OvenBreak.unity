@@ -13572,13 +13572,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 582321685, guid: 185ad6569d027bc499885e0fe222824b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 61.18577
       objectReference: {fileID: 0}
     - target: {fileID: 582321688, guid: 185ad6569d027bc499885e0fe222824b, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 49c35a8b77595154ba643f14882dffda,
+      objectReference: {fileID: 12800000, guid: 09855af57fb7d0840aab6dba6ae3b1d7,
         type: 3}
+    - target: {fileID: 582321688, guid: 185ad6569d027bc499885e0fe222824b, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 974386385, guid: 185ad6569d027bc499885e0fe222824b, type: 3}
       propertyPath: m_Name
       value: ConfirmButton
@@ -13595,6 +13599,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2093675776, guid: 185ad6569d027bc499885e0fe222824b, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 09855af57fb7d0840aab6dba6ae3b1d7,
+        type: 3}
+    - target: {fileID: 2093675776, guid: 185ad6569d027bc499885e0fe222824b, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7280317697495101401, guid: 185ad6569d027bc499885e0fe222824b,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -13604,8 +13617,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 49c35a8b77595154ba643f14882dffda,
+      objectReference: {fileID: 12800000, guid: 09855af57fb7d0840aab6dba6ae3b1d7,
         type: 3}
+    - target: {fileID: 7280317697495101402, guid: 185ad6569d027bc499885e0fe222824b,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7280317698039385585, guid: 185ad6569d027bc499885e0fe222824b,
         type: 3}
       propertyPath: m_Name
@@ -13726,9 +13744,43 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7280317698380464996, guid: 185ad6569d027bc499885e0fe222824b,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 09855af57fb7d0840aab6dba6ae3b1d7,
+        type: 3}
+    - target: {fileID: 7280317698409603308, guid: 185ad6569d027bc499885e0fe222824b,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 09855af57fb7d0840aab6dba6ae3b1d7,
+        type: 3}
+    - target: {fileID: 7280317698876212499, guid: 185ad6569d027bc499885e0fe222824b,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 09855af57fb7d0840aab6dba6ae3b1d7,
+        type: 3}
+    - target: {fileID: 7280317698876212499, guid: 185ad6569d027bc499885e0fe222824b,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7280317699475436352, guid: 185ad6569d027bc499885e0fe222824b,
         type: 3}
       propertyPath: m_SizeDelta.x
+      value: 96.75889
+      objectReference: {fileID: 0}
+    - target: {fileID: 7280317699475436357, guid: 185ad6569d027bc499885e0fe222824b,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 09855af57fb7d0840aab6dba6ae3b1d7,
+        type: 3}
+    - target: {fileID: 7280317699475436357, guid: 185ad6569d027bc499885e0fe222824b,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
