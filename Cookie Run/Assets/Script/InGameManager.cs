@@ -66,7 +66,7 @@ public class InGameManager : MonoBehaviour
             speed = 0f;
             CooKie.instance.Die();
             SFXmanager.instance.PlayOnGameEnd();
-            Invoke("OnResult", 2f);
+            Invoke("GameStop", 2f);
         }
     }
 

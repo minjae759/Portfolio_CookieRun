@@ -1,6 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BGMButton
+    - BGMSlider
+    - BGMmanager
     - BigBearJelly
     - BoostEffect
     - CameraMove
@@ -24,14 +27,15 @@ ScriptsOnlyBuild:
     - PlaySlideclip
     - RestartButton
     - ResultScore
+    - ResultbestScore
     - ResumeButton
+    - SFXButton
+    - SFXSlider
+    - SFXmanager
     - ScrollScript
     - SettingButton
     - SlideButton
-    - SoundButton
-    - SoundManager
     - StopButton
-    - VolumeSlider
     - obstacleeffect
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -124,51 +128,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11840}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 12318}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 12372}
+      Script: {instanceID: 12378}
     - Class: 114
-      Script: {instanceID: 12644}
+      Script: {instanceID: 12650}
     - Class: 114
-      Script: {instanceID: 12940}
+      Script: {instanceID: 12946}
     - Class: 114
-      Script: {instanceID: 13156}
+      Script: {instanceID: 13100}
     - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 13164}
     - Class: 114
-      Script: {instanceID: 13398}
+      Script: {instanceID: 13376}
     - Class: 114
-      Script: {instanceID: 13544}
+      Script: {instanceID: 13404}
     - Class: 114
-      Script: {instanceID: 13652}
+      Script: {instanceID: 13552}
     - Class: 114
-      Script: {instanceID: 13656}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 13770}
+      Script: {instanceID: 13664}
     - Class: 114
-      Script: {instanceID: 13788}
+      Script: {instanceID: 13778}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 13796}
     - Class: 114
-      Script: {instanceID: 14198}
+      Script: {instanceID: 13810}
     - Class: 114
-      Script: {instanceID: 14222}
+      Script: {instanceID: 14206}
     - Class: 114
-      Script: {instanceID: 14320}
+      Script: {instanceID: 14230}
     - Class: 114
-      Script: {instanceID: 14354}
+      Script: {instanceID: 14330}
     - Class: 114
-      Script: {instanceID: 14422}
+      Script: {instanceID: 14364}
     - Class: 114
-      Script: {instanceID: 14438}
-    - Class: 114
-      Script: {instanceID: 14446}
+      Script: {instanceID: 14432}
     - Class: 114
       Script: {instanceID: 14448}
     - Class: 114
-      Script: {instanceID: 14496}
+      Script: {instanceID: 14456}
+    - Class: 114
+      Script: {instanceID: 14458}
+    - Class: 114
+      Script: {instanceID: 14506}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -221,29 +227,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 12288}
+      Script: {instanceID: 11906}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 11930}
     - Class: 114
-      Script: {instanceID: 12880}
+      Script: {instanceID: 12292}
     - Class: 114
-      Script: {instanceID: 13162}
+      Script: {instanceID: 12318}
     - Class: 114
-      Script: {instanceID: 13622}
+      Script: {instanceID: 12330}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 12792}
     - Class: 114
-      Script: {instanceID: 13904}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 14012}
+      Script: {instanceID: 13630}
     - Class: 114
-      Script: {instanceID: 14320}
+      Script: {instanceID: 13810}
     - Class: 114
-      Script: {instanceID: 14422}
+      Script: {instanceID: 13912}
     - Class: 114
-      Script: {instanceID: 14444}
+      Script: {instanceID: 14292}
     - Class: 114
-      Script: {instanceID: 14470}
+      Script: {instanceID: 14330}
+    - Class: 114
+      Script: {instanceID: 14432}
+    - Class: 114
+      Script: {instanceID: 14454}
+    - Class: 114
+      Script: {instanceID: 14480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -290,21 +302,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11820}
     - Class: 114
-      Script: {instanceID: 12140}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 12318}
     - Class: 114
-      Script: {instanceID: 12668}
+      Script: {instanceID: 12674}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 13810}
     - Class: 114
-      Script: {instanceID: 14210}
+      Script: {instanceID: 14218}
     - Class: 114
-      Script: {instanceID: 14320}
+      Script: {instanceID: 14330}
     - Class: 114
-      Script: {instanceID: 14354}
+      Script: {instanceID: 14364}
     - Class: 114
-      Script: {instanceID: 14422}
+      Script: {instanceID: 14432}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -506,10 +518,22 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 3d22cfa32a1801b819a64fd76f63b1b7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BGMmanager
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 735f7e81f3d88ad565c2591867eaea78
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SFXButton
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -578,7 +602,7 @@ ScriptsOnlyBuild:
     className: EventSystem
   - hash:
       serializedVersion: 2
-      Hash: e0f22d94948612e935d0674a863047e4
+      Hash: fedfb7c768a205a991fc826457960bf2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InGameManager
@@ -594,6 +618,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: facd9990d4347c8537419de0c888d248
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SFXmanager
   - hash:
       serializedVersion: 2
       Hash: 0edeba255bdbade25edc357f1412ba38
@@ -657,15 +687,15 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.TextMeshPro.dll
-    namespaceName: TMPro
-    className: TMP_SpriteAnimator
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SFXSlider
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VolumeSlider
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -695,13 +725,13 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ConfirmButton
+    className: ResultbestScore
   - hash:
       serializedVersion: 2
-      Hash: 31be3cd7624353833775c76f8f2463cf
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SoundManager
+    className: ConfirmButton
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -780,6 +810,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 735f7e81f3d88ad565c2591867eaea78
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BGMButton
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -900,6 +936,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BGMSlider
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
