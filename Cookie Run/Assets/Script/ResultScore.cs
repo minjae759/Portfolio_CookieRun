@@ -7,7 +7,6 @@ public class ResultScore : MonoBehaviour
 {
     private void OnEnable()
     {
-        SFXmanager.instance.PlayOnResult();
         gameObject.GetComponent<Text>().text = InGameManager.instance.getscore();
     }
 }

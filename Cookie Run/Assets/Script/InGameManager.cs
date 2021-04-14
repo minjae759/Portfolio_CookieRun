@@ -9,6 +9,7 @@ public class InGameManager : MonoBehaviour
     public Image hpbar;
     public Text jellyScore;
     public GameObject result;
+    public Image newicon;
 
     public GameObject boosteffectPrefab;
 
@@ -19,7 +20,9 @@ public class InGameManager : MonoBehaviour
     public bool isGameover;
     public bool ismagatic;
     int gamescore = 0;
+    int bestScore;
     string strScore = "";
+    
 
 
     private void Awake()
@@ -45,6 +48,8 @@ public class InGameManager : MonoBehaviour
 
     void Start()
     {
+        if (!PlayerPrefs.HasKey("BestScore"))
+            PlayerPrefs.SetInt("BestScore", 0);
         isGameover = false;
         ismagatic = false;
         idx = 0;
@@ -65,13 +70,6 @@ public class InGameManager : MonoBehaviour
         }
     }
 
-    public void updateScore(int score)
-    {
-        gamescore += score;
-        strScore = string.Format("{0:#,##0}", gamescore);
-        jellyScore.text = strScore;
-    }
-
     public void healhp(float percent)
     {
         hpbar.fillAmount += percent;
@@ -82,11 +80,21 @@ public class InGameManager : MonoBehaviour
         hpbar.fillAmount -= percent;
     }
 
+    public void updateScore(int score)
+    {
+        gamescore += score;
+        strScore = string.Format("{0:#,##0}", gamescore);
+        jellyScore.text = strScore;
+    }
+
     public void GameStop()
     {
         isGameover = true;
         speed = 0f;
-        OnResult();
+        if(gamescore > PlayerPrefs.GetInt("BestScore"))
+            PlayerPrefs.SetInt("BestScore", gamescore);
+        result.SetActive(true);
+        SFXmanager.instance.PlayOnResult();
     }
 
     public void Onboosteffect()
@@ -115,11 +123,6 @@ public class InGameManager : MonoBehaviour
         yield break;
     }
 
-    void OnResult()
-    {
-        result.SetActive(true);
-    }
-
     public float getspeed()
     {
         return speed;
@@ -128,5 +131,15 @@ public class InGameManager : MonoBehaviour
     public string getscore()
     {
         return strScore;
+    }
+
+    public string getBestscore()
+    {
+        bestScore = PlayerPrefs.GetInt("BestScore");
+        if (bestScore == gamescore)
+            newicon.gameObject.SetActive(true);
+        else
+            newicon.gameObject.SetActive(false);
+        return string.Format("{0:#,##0}", bestScore);
     }
 }

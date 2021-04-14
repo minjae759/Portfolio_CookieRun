@@ -22,7 +22,9 @@ public class BGMmanager : MonoBehaviour
         if (instance == null)
             instance = this;
         audioSource = GetComponent<AudioSource>();
-        audioSource.volume = 0.5f;
+        if(!PlayerPrefs.HasKey("BGXvolume"))
+            PlayerPrefs.SetFloat("BGXvolume", 1.0f);
+        audioSource.volume = PlayerPrefs.GetFloat("BGXvolume");
         isvolumeOn = true;
     }
 
@@ -60,18 +62,24 @@ public class BGMmanager : MonoBehaviour
     public void SoundOn(float value)
     {
         isvolumeOn = true;
-        audioSource.volume = value * 0.5f;
+        PlayerPrefs.SetFloat("BGXvolume", value);
+        audioSource.volume = PlayerPrefs.GetFloat("BGXvolume");
     }
 
     public void SoundOff()
     {
         isvolumeOn = false;
+        PlayerPrefs.SetFloat("BGXvolume", 0.0f);
         audioSource.volume = 0.0f;
+        PlayerPrefs.SetFloat("BGXvolume", 0.0f);
     }
 
     public void ChangeVolume(float value)
     {
         if (isvolumeOn)
-            audioSource.volume = value * 0.5f;
+        {
+            PlayerPrefs.SetFloat("BGXvolume", value);
+            audioSource.volume = PlayerPrefs.GetFloat("BGXvolume");
+        }
     }
 }

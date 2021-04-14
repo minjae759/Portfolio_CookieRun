@@ -21,7 +21,6 @@ public class Modeselect : MonoBehaviour
     public void MouseDown()
     {
         transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
-
     }
 
     public void MouseUp()
@@ -29,7 +28,6 @@ public class Modeselect : MonoBehaviour
         transform.localScale = new Vector3(2f, 2f, 2f);
         if (sceneName != "null")
         {
-            SFXmanager.instance.PlayOnGameStart();
             SceneManager.LoadScene(sceneName);
         }
     }

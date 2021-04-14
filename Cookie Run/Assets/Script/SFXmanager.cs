@@ -43,16 +43,13 @@ public class SFXmanager : MonoBehaviour
         if (instance == null)
             instance = this;
         audioSource = GetComponent<AudioSource>();
-        audioSource.volume = 0.5f;
+        if (!PlayerPrefs.HasKey("SFXvolume"))
+            PlayerPrefs.SetFloat("SFXvolume", 1.0f);
+        audioSource.volume = PlayerPrefs.GetFloat("SFXvolume");
         isvolumeOn = true;
         flyingjellyidx = 0;
     }
 
-    public void PlayOnGameStart()
-    {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(GameStart);
-    }
 
     public void PlayOnGameEnd()
     {
@@ -151,19 +148,23 @@ public class SFXmanager : MonoBehaviour
     public void SoundOn(float value)
     {
         isvolumeOn = true;
-        audioSource.volume = value * 1.0f;
+        PlayerPrefs.SetFloat("SFXvolume", value);
+        audioSource.volume = PlayerPrefs.GetFloat("SFXvolume");
     }
 
     public void SoundOff()
     {
         isvolumeOn = false;
         audioSource.volume = 0.0f;
+        PlayerPrefs.SetFloat("SFXvolume", 0.0f);
     }
 
     public void ChangeVolume(float value)
     {
         if (isvolumeOn)
-            audioSource.volume = value * 1.0f;
+        {
+            PlayerPrefs.SetFloat("SFXvolume", value);
+            audioSource.volume = PlayerPrefs.GetFloat("SFXvolume");
+        }
     }
-
 }
