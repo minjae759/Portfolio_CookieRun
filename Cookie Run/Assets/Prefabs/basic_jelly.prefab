@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1626345386343407863}
   m_Layer: 12
   m_Name: basic_jelly
-  m_TagString: Jelly
+  m_TagString: Basicjelly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

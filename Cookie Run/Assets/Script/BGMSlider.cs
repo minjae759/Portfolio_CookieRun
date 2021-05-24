@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class BGMSlider : MonoBehaviour
 {
-    private void Start()
+    private void OnEnable()
     {
-        gameObject.GetComponent<Slider>().value = PlayerPrefs.GetFloat("BGXvolume");
+        gameObject.GetComponent<Slider>().value = PlayerPrefs.GetFloat("BGMslider");
     }
 
     public void ValueChanged()
     {
-        BGMmanager.instance.ChangeVolume(gameObject.GetComponent<Slider>().value);
+        PlayerPrefs.SetFloat("BGMslider", gameObject.GetComponent<Slider>().value);
+        BGMmanager.instance.ChangeVolume(PlayerPrefs.GetFloat("BGMslider"));
     }
 }
 

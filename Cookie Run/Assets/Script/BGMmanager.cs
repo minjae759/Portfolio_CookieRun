@@ -15,71 +15,61 @@ public class BGMmanager : MonoBehaviour
 
     bool isvolumeOn;
 
-
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
         if (instance == null)
             instance = this;
         audioSource = GetComponent<AudioSource>();
-        if(!PlayerPrefs.HasKey("BGXvolume"))
-            PlayerPrefs.SetFloat("BGXvolume", 1.0f);
-        audioSource.volume = PlayerPrefs.GetFloat("BGXvolume");
-        isvolumeOn = true;
+        if (PlayerPrefs.HasKey("BGMisOn"))
+            if (PlayerPrefs.GetInt("BGMisOn") == 1)
+                SoundOn(PlayerPrefs.GetFloat("BGMslider"));
+            else
+                SoundOff();
+        else
+            SoundOn(PlayerPrefs.GetFloat("BGMslider"));
     }
 
     public void PlayOnMainlobby()
     {
-        if (isvolumeOn)
-        {
-            audioSource.clip = bgm_Mainlobby;
-            audioSource.Stop();
-            audioSource.Play();
-        }
+        audioSource.clip = bgm_Mainlobby;
+        audioSource.Stop();
+        audioSource.Play();
     }
     public void PlayOnChanege()
     {
-        if (isvolumeOn)
-        {
-            audioSource.clip = bgm_Twisted_Maze_Grove;
-            audioSource.Stop();
-            audioSource.Play();
-        }
-
+        audioSource.clip = bgm_Twisted_Maze_Grove;
+        audioSource.Stop();
+        audioSource.Play();
     }
 
     public void PlayOnTitle()
     {
-        if (isvolumeOn)
-        {
-            audioSource.clip = bgm_The_Witchs_House;
-            audioSource.Stop();
-            audioSource.Play();
-        }
 
+        audioSource.clip = bgm_The_Witchs_House;
+        audioSource.Stop();
+        audioSource.Play();
     }
 
     public void SoundOn(float value)
     {
         isvolumeOn = true;
-        PlayerPrefs.SetFloat("BGXvolume", value);
-        audioSource.volume = PlayerPrefs.GetFloat("BGXvolume");
+        audioSource.mute = false;
+        PlayerPrefs.SetFloat("BGMslider", value);
+        audioSource.volume = PlayerPrefs.GetFloat("BGMslider");
     }
 
     public void SoundOff()
     {
         isvolumeOn = false;
-        PlayerPrefs.SetFloat("BGXvolume", 0.0f);
-        audioSource.volume = 0.0f;
-        PlayerPrefs.SetFloat("BGXvolume", 0.0f);
+        audioSource.mute = true;
     }
 
     public void ChangeVolume(float value)
     {
         if (isvolumeOn)
         {
-            PlayerPrefs.SetFloat("BGXvolume", value);
-            audioSource.volume = PlayerPrefs.GetFloat("BGXvolume");
+            audioSource.volume = value;
         }
     }
 }

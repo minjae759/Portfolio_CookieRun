@@ -13,6 +13,8 @@ TagManager:
   - Obstacle
   - BigBearJelly
   - FlyingBearJelly
+  - Basicjelly
+  - Gomjelly
   layers:
   - Default
   - TransparentFX

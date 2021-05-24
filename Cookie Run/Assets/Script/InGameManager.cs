@@ -14,7 +14,10 @@ public class InGameManager : MonoBehaviour
     public GameObject boosteffectPrefab;
 
     GameObject[] boosteffect;
+    GameObject[] basicjellies;
+    
     int idx;
+    int targetidx;
 
     static public float speed = 7f;
     public bool isGameover;
@@ -22,8 +25,6 @@ public class InGameManager : MonoBehaviour
     int gamescore = 0;
     int bestScore;
     string strScore = "";
-    
-
 
     private void Awake()
     {
@@ -31,9 +32,7 @@ public class InGameManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
-
         boosteffect = new GameObject[20];
-
         for (int i = 0; i < boosteffect.Length; i++)
         {
             boosteffect[i] = Instantiate(boosteffectPrefab);
@@ -109,6 +108,28 @@ public class InGameManager : MonoBehaviour
         speed = 7f;
         CooKie.instance.Offboost();
         StopCoroutine(BoostTime());
+    }
+
+    public Vector3 GetTargetjellyPos()
+    {
+        basicjellies = GameObject.FindGameObjectsWithTag("Basicjelly");
+        if (basicjellies.Length == 0) return Vector3.zero;
+        targetidx = basicjellies.Length+1;
+        for(int i = 0; i < basicjellies.Length; i++)
+        {
+            if (CooKie.instance.transform.position.x + 10f < basicjellies[i].transform.position.x && CooKie.instance.transform.position.x + 15f > basicjellies[i].transform.position.x)
+            {
+                targetidx = i;
+            }
+        }
+        if (basicjellies.Length <= targetidx) return Vector3.zero;
+        Vector3 targetpos = basicjellies[targetidx].transform.position;
+        return targetpos;
+    }
+
+    public void OffTargetjelly()
+    {
+        basicjellies[targetidx].SetActive(false);
     }
 
     IEnumerator BoostTime()

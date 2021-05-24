@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class SFXSlider : MonoBehaviour
 {
-    private void Start()
+    private void OnEnable()
     {
-        gameObject.GetComponent<Slider>().value = PlayerPrefs.GetFloat("SFXvolume");
+        gameObject.GetComponent<Slider>().value = PlayerPrefs.GetFloat("SFXslider");
     }
 
     public void ValueChanged()
     {
-        SFXmanager.instance.ChangeVolume(gameObject.GetComponent<Slider>().value);
+        PlayerPrefs.SetFloat("SFXslider", gameObject.GetComponent<Slider>().value);
+        SFXmanager.instance.ChangeVolume(PlayerPrefs.GetFloat("SFXslider"));
     }
 }

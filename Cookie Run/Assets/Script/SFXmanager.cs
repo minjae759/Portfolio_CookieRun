@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SFXmanager : MonoBehaviour
 {
-
     public static SFXmanager instance;
 
     AudioSource audioSource;
@@ -43,128 +42,111 @@ public class SFXmanager : MonoBehaviour
         if (instance == null)
             instance = this;
         audioSource = GetComponent<AudioSource>();
-        if (!PlayerPrefs.HasKey("SFXvolume"))
-            PlayerPrefs.SetFloat("SFXvolume", 1.0f);
-        audioSource.volume = PlayerPrefs.GetFloat("SFXvolume");
-        isvolumeOn = true;
+        if (PlayerPrefs.HasKey("SFXisOn"))
+            if (PlayerPrefs.GetInt("SFXisOn") == 1)
+                SoundOn(PlayerPrefs.GetFloat("SFXslider"));
+            else
+                SoundOff();
+        else
+            SoundOn(PlayerPrefs.GetFloat("SFXslider"));
         flyingjellyidx = 0;
     }
 
-
     public void PlayOnGameEnd()
     {
-        if (isvolumeOn)
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(GameEnd);
-        }
+        audioSource.Stop();
+        audioSource.PlayOneShot(GameEnd);
     }
 
     public void PlayOnResult()
     {
-        if (isvolumeOn)
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(Result);
-        }
+        audioSource.Stop();
+        audioSource.PlayOneShot(Result);
     }
 
     public void PlayOnGetJelly()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(getJelly);
+        audioSource.PlayOneShot(getJelly);
     }
 
 
     public void PlayOnGetFlyingBearJelly()
     {
-        if (isvolumeOn)
-        {
-            if (flyingjellyidx >= 6) flyingjellyidx = 0;
-            audioSource.PlayOneShot(getFlyingBearJelly[flyingjellyidx++]);
-        }
+
+        if (flyingjellyidx >= 6) flyingjellyidx = 0;
+        audioSource.PlayOneShot(getFlyingBearJelly[flyingjellyidx++]);
+
     }
 
     public void PlayOnGetBigBearJelly()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(getBigBearJelly);
+        audioSource.PlayOneShot(getBigBearJelly);
     }
 
     public void PlayOnGetItemJelly()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(getItemJelly);
+        audioSource.PlayOneShot(getItemJelly);
     }
 
     public void CrashWithObstacle()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(bounceWithObstacle);
+        audioSource.PlayOneShot(bounceWithObstacle);
     }
 
     public void PlayOnCrashWithBody()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(crashWithBody);
+        audioSource.PlayOneShot(crashWithBody);
     }
 
     public void PlayOnGiganticStart()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(giganticStart);
+        audioSource.PlayOneShot(giganticStart);
     }
 
     public void PlayOnGiganticEnd()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(giganticEnd);
+        audioSource.PlayOneShot(giganticEnd);
     }
 
     public void PlayOnGiganticLanding()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(giganticLanding);
+        audioSource.PlayOneShot(giganticLanding);
     }
 
     public void PlayOnSlideclip()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(slideClip);
+        audioSource.PlayOneShot(slideClip);
     }
 
     public void PlayOnJumpclip()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(jumpClip);
+        audioSource.PlayOneShot(jumpClip);
     }
 
     public void PlayOnuibutton()
     {
-        if (isvolumeOn)
-            audioSource.PlayOneShot(uibutton);
+        audioSource.PlayOneShot(uibutton);
     }
 
     public void SoundOn(float value)
     {
         isvolumeOn = true;
-        PlayerPrefs.SetFloat("SFXvolume", value);
-        audioSource.volume = PlayerPrefs.GetFloat("SFXvolume");
+        audioSource.mute = false;
+        PlayerPrefs.SetFloat("SFXslider", value);
+        audioSource.volume = PlayerPrefs.GetFloat("SFXslider");
     }
 
     public void SoundOff()
     {
         isvolumeOn = false;
-        audioSource.volume = 0.0f;
-        PlayerPrefs.SetFloat("SFXvolume", 0.0f);
+        audioSource.mute = true;
     }
 
     public void ChangeVolume(float value)
     {
         if (isvolumeOn)
         {
-            PlayerPrefs.SetFloat("SFXvolume", value);
-            audioSource.volume = PlayerPrefs.GetFloat("SFXvolume");
+            audioSource.volume = value;
         }
     }
 }
